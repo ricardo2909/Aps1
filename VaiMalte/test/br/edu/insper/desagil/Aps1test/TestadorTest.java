@@ -9,10 +9,6 @@ import br.edu.insper.desagil.Aps1.Testador;
 
 class TestadorTest {
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
 	private Testador t;
 
 	@BeforeEach

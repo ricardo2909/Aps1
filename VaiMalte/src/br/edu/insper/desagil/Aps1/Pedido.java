@@ -24,10 +24,8 @@ public class Pedido {
 	}
 	
 	public double multi() {
-		double total;
-		double preco=this.produto.getPreco();
-		total = this.quantidade * preco;
-		return total;
+		int quant = this.quantidade;
+		return this.getProduto().getPreco() * quant;
 		
 	}
 

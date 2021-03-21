@@ -15,4 +15,16 @@ public class Carrinho {
 		this.pedidos = new ArrayList<>();
 	}
 	
+	public void aumentaQuant(Produto produto) {
+		for (Pedido pedido:pedidos) {
+			if (pedido.getProduto() == produto) {
+				pedido.aumenta();
+				return;
+			}
+		}
+		
+		Pedido pedido = new Pedido(produto);
+		pedidos.add(pedido);
+	
+	}
 }
