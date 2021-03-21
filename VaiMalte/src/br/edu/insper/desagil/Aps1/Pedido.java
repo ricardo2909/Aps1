@@ -18,14 +18,14 @@ public class Pedido {
 		return quantidade;
 	}
 	
-	public void aumenta() {
+	public void AumentaQuantidade() {
 		this.quantidade ++;
 		return;
 	}
 	
-	public double multi() {
-		int quant = this.quantidade;
-		return this.getProduto().getPreco() * quant;
+	public double Multiplica() {
+		int quantidadeFinal = this.quantidade;
+		return this.getProduto().getPreco() * quantidadeFinal;
 		
 	}
 

@@ -18,7 +18,7 @@ public class Testador {
 
 	public boolean testeB() {
 		double preco;
-		teste2.aumentaQuant(PS5);
+		teste2.AumentaLista(PS5);
 		preco = teste1.soma(teste2);
 		if (preco == 5000) {
 			return true;
@@ -28,8 +28,8 @@ public class Testador {
 
 	public boolean testeC() {
 		double preco;
-		teste2.aumentaQuant(PS5);
-		teste1.produtocomDesconto(PS5, 5);
+		teste2.AumentaLista(PS5);
+		teste1.CriaDesconto(PS5, 5);
 		preco = teste1.soma(teste2);
 		if (preco == 4750) {
 			return true;
@@ -39,10 +39,10 @@ public class Testador {
 
 	public boolean testeD() {
 		double preco;
-		teste2.aumentaQuant(PS5);
-		teste2.aumentaQuant(TV);
-		teste2.aumentaQuant(TV);
-		teste1.produtocomDesconto(PS5, 10);
+		teste2.AumentaLista(PS5);
+		teste2.AumentaLista(TV);
+		teste2.AumentaLista(TV);
+		teste1.CriaDesconto(PS5, 10);
 		preco = teste1.soma(teste2);
 		if (preco == 8500) {
 			return true;
@@ -52,10 +52,10 @@ public class Testador {
 
 	public boolean testeE() {
 		double preco;
-		teste2.aumentaQuant(PS5);
-		teste2.aumentaQuant(PS5);
-		teste2.aumentaQuant(TV);
-		teste1.produtocomDesconto(PS5, 15);
+		teste2.AumentaLista(PS5);
+		teste2.AumentaLista(PS5);
+		teste2.AumentaLista(TV);
+		teste1.CriaDesconto(PS5, 15);
 		preco = teste1.soma(teste2);
 		if (preco == 10500) {
 			return true;

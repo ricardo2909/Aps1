@@ -15,10 +15,10 @@ public class Carrinho {
 		this.pedidos = new ArrayList<>();
 	}
 	
-	public void aumentaQuant(Produto produto) {
+	public void AumentaLista(Produto produto) {
 		for (Pedido pedido:pedidos) {
 			if (pedido.getProduto() == produto) {
-				pedido.aumenta();
+				pedido.AumentaQuantidade();
 				return;
 			}
 		}
@@ -27,4 +27,5 @@ public class Carrinho {
 		pedidos.add(pedido);
 	
 	}
+
 }

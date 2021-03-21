@@ -11,28 +11,28 @@ public class Caixa {
 		this.descontos = new HashMap<>();
 	}
 	
-	public void produtocomDesconto(Produto produto, int porcentagem) {
-		if (porcentagem > 0 && porcentagem <= 99) {
-			this.descontos.put(produto.getCodigo(), porcentagem);
+	public void CriaDesconto(Produto produto, int porcentagemDesconto) {
+		if (porcentagemDesconto > 0 && porcentagemDesconto <= 99) {
+			this.descontos.put(produto.getCodigo(), porcentagemDesconto);
 			return ;
 		}
 	}
 	
 	public double soma(Carrinho carrinho) {
-		double porcentagem = 0;
-		float totalpreco = 0;
+		double porcentagemDesconto = 0;
+		float totalPreco = 0;
 		for (Pedido pedido: carrinho.getPedidos() ) {
 			int codigo;
 			codigo = pedido.getProduto().getCodigo();
 			if (this.descontos.containsKey(codigo)) {
-				porcentagem = this.descontos.get(codigo);
-				totalpreco += pedido.multi() * (1 - (porcentagem / 100));
+				porcentagemDesconto = this.descontos.get(codigo);
+				totalPreco += pedido.Multiplica() * (1 - (porcentagemDesconto / 100));
 			}
 			else {
-				totalpreco += pedido.multi();
+				totalPreco += pedido.Multiplica();
 			}
 		}
-		return totalpreco;
+		return totalPreco;
 	}
 
 }
