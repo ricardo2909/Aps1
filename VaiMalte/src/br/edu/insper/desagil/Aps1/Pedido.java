@@ -17,6 +17,19 @@ public class Pedido {
 	public int getQuantidade() {
 		return quantidade;
 	}
+	
+	public void aumenta() {
+		this.quantidade ++;
+		return;
+	}
+	
+	public double multi() {
+		double total;
+		double preco=this.produto.getPreco();
+		total = this.quantidade * preco;
+		return total;
+		
+	}
 
 	
 }

@@ -20,7 +20,7 @@ public class Produto {
 		return nome;
 	}
 
-	public double isPreco() {
+	public double getPreco() {
 		return preco;
 	}
 
